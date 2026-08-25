@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.dll
+*.exe
+*.pdb
+.DS_Store
