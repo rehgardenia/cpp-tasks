@@ -18,7 +18,7 @@ public class Restaurante{
         }
         return false;
     }
-    public Pedido buscarPedido(int id)
+    public Pedido? buscarPedido(int id)
     {
         return Pedidos.FirstOrDefault(p => p.Id == id);
     }

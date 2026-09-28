@@ -2,8 +2,8 @@ public class Pedido
 {
     private const int MAX_ITEM = 10;
 
-    public int Id { get; set; }
-    public string Client{ get; set; }
+    public  int  Id { get; set; }
+    public string Client{ get; set; } = string.Empty;
     public List<Item> Items { get; set; }
 
     public Pedido()
