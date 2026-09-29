@@ -1,0 +1,15 @@
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.AssemblyInfoInputs.cache
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.AssemblyInfo.cs
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.csproj.CoreCompileInputs.cache
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.sourcelink.json
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\bin\Debug\net10.0\ATV4-AGENDA.exe
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\bin\Debug\net10.0\ATV4-AGENDA.deps.json
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\bin\Debug\net10.0\ATV4-AGENDA.runtimeconfig.json
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\bin\Debug\net10.0\ATV4-AGENDA.dll
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\bin\Debug\net10.0\ATV4-AGENDA.pdb
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.dll
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\refint\ATV4-AGENDA.dll
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.pdb
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ATV4-AGENDA.genruntimeconfig.cache
+C:\Users\q0803799\Documents\ADS\cpp-tasks\EDD2\ATV4-AGENDA\obj\Debug\net10.0\ref\ATV4-AGENDA.dll
