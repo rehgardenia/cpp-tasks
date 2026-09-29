@@ -1,10 +1,11 @@
 ﻿using ATV4_AGENDA.Models;
 using ATV4_AGENDA.Controller;
+
 class Program
 {
     static void Main(string[] args)
     {
-       Contatos contatos = new Contatos();
+        Contatos contatos = new Contatos();
         int opcao;
 
         do
@@ -12,7 +13,8 @@ class Program
             AgendaController.Menu();
             Console.Write("Opção: ");
 
-            if (!int.TryParse(Console.ReadLine(), out opcao))
+            string? entrada = Console.ReadLine();
+            if (!int.TryParse(entrada, out opcao))
             {
                 Console.WriteLine("Opção inválida. Digite um número.");
                 Console.WriteLine();

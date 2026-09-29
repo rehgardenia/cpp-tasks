@@ -4,6 +4,7 @@ namespace ATV4_AGENDA.Controller;
 
 public class AgendaController
 {
+
     public static void Menu()
     {
         Console.WriteLine("=== AGENDA DE CONTATOS ===");
@@ -43,6 +44,12 @@ public class AgendaController
             return false;
         }
 
+        if (mes < 1 || mes > 12 || dia < 1 || dia > 31)
+        {
+            Console.WriteLine("Data inválida. Valores fora do intervalo permitido.");
+            return false;
+        }
+
         data = new Data(dia, mes, ano);
         return true;
     }
@@ -53,10 +60,22 @@ public class AgendaController
         Contato novoContato = new Contato();
 
         Console.Write("Nome: ");
-        novoContato.Nome = Console.ReadLine() ?? string.Empty;
+        string? nome = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(nome))
+        {
+            Console.WriteLine("Nome inválido.");
+            return;
+        }
+        novoContato.Nome = nome;
 
         Console.Write("Email: ");
-        novoContato.Email = Console.ReadLine() ?? string.Empty;
+        string? email = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(email) )
+        {
+            Console.WriteLine("Email inválido.");
+            return;
+        }
+        novoContato.Email = email;
 
         if (!TryLerData("Data de Nascimento (dd/mm/aaaa): ", out Data? dataNascimento))
         {
@@ -70,13 +89,26 @@ public class AgendaController
         {
             Telefone telefone = new Telefone();
             Console.Write("Tipo do Telefone (ex: Celular, Residencial, Comercial): ");
-            telefone.Tipo = Console.ReadLine() ?? string.Empty;
+            string? tipo = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(tipo))
+            {
+                Console.WriteLine("Tipo de telefone inválido.");
+                return;
+            }
+            telefone.Tipo = tipo;
 
             Console.Write("Número do Telefone: ");
-            telefone.Numero = Console.ReadLine() ?? string.Empty;
+            string? numero = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(numero))
+            {
+                Console.WriteLine("Número inválido.");
+                return;
+            }
+            telefone.Numero = numero;
 
             Console.Write("É o telefone principal? (s/n): ");
-            telefone.Principal = Console.ReadLine()?.ToLower() == "s";
+            string? principal = Console.ReadLine();
+            telefone.Principal = principal?.ToLower() == "s";
 
             novoContato.adicionarTelefone(telefone);
 
@@ -100,6 +132,11 @@ public class AgendaController
         Console.WriteLine("=== PESQUISAR CONTATO ===");
         Console.Write("Digite o nome do contato: ");
         string nome = Console.ReadLine() ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(nome))
+        {
+            Console.WriteLine("Nome inválido.");
+            return;
+        }
 
         Contato? contatoEncontrado = contatos.Agenda.FirstOrDefault(c => c.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
         if (contatoEncontrado != null)
@@ -127,6 +164,11 @@ public class AgendaController
         Console.WriteLine("=== ALTERAR CONTATO ===");
         Console.Write("Digite o nome do contato que deseja alterar: ");
         string nome = Console.ReadLine() ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(nome))
+        {
+            Console.WriteLine("Nome inválido.");
+            return;
+        }
 
         Contato? contatoExistente = contatos.Agenda.FirstOrDefault(c => c.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
         if (contatoExistente != null)
@@ -137,14 +179,18 @@ public class AgendaController
             string novoNome = Console.ReadLine() ?? string.Empty;
             if (!string.IsNullOrWhiteSpace(novoNome))
             {
-                contatoExistente.Nome = novoNome;
+            
+                    contatoExistente.Nome = novoNome;
+
             }
 
             Console.Write("Novo Email (deixe em branco para não alterar): ");
             string novoEmail = Console.ReadLine() ?? string.Empty;
             if (!string.IsNullOrWhiteSpace(novoEmail))
             {
-                contatoExistente.Email = novoEmail;
+              
+                    contatoExistente.Email = novoEmail;
+           
             }
 
             if (TryLerData("Nova Data de Nascimento (dd/mm/aaaa) (deixe em branco para não alterar): ", out Data? novaData))
@@ -163,6 +209,11 @@ public class AgendaController
         Console.WriteLine("=== REMOVER CONTATO ===");
         Console.Write("Digite o nome do contato que deseja remover: ");
         string nome = Console.ReadLine() ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(nome))
+        {
+            Console.WriteLine("Nome inválido.");
+            return;
+        }
 
         Contato? contato = contatos.Agenda.FirstOrDefault(c => c.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
 
