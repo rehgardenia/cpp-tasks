@@ -1,6 +1,7 @@
+namespace ATV6_BIBLIOTECA.Models;
 public class Livro
 {
-    public int Isbn { get; set; }
+    public string Isbn { get; set; }
     public string Titulo { get; set; }
     public string Autor { get; set; }
     public string Editora { get; set; }
@@ -8,9 +9,13 @@ public class Livro
 
     public Livro()
     {
+        Isbn = string.Empty;
+        Titulo = string.Empty;
+        Autor = string.Empty;
+        Editora = string.Empty;
         Exemplares = new List<Exemplar>();
     }
-    public Livro(int isbn, string titulo, string autor, string editora)
+    public Livro(string isbn, string titulo, string autor, string editora)
     {
         Isbn = isbn;
         Titulo = titulo;

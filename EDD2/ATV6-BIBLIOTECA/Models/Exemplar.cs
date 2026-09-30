@@ -1,3 +1,4 @@
+namespace ATV6_BIBLIOTECA.Models;
 public class Exemplar
 {
     public int Tombo { get; set; }

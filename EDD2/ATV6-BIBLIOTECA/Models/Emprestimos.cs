@@ -1,3 +1,4 @@
+namespace ATV6_BIBLIOTECA.Models;
 public class Emprestimo
 {
     public DateTime DataEmprestimo { get; set; }
