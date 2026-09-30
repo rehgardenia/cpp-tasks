@@ -1,6 +1,6 @@
-using ATV4_AGENDA.Models;
+namespace ATV5_AGENDA_WFA.Models;
 
-namespace ATV4_AGENDA.Controller;
+namespace ATV5_AGENDA_WFA.Controller;
 
 public class AgendaController
 {
