@@ -1,4 +1,4 @@
-namespace ATV5_AGENDA_WFA.Models;
+using ATV5_AGENDA_WFA.Models;
 
 namespace ATV5_AGENDA_WFA.Controller;
 
