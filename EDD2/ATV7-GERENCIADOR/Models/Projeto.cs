@@ -1,4 +1,4 @@
-namespace GerenciadorDeTarefas.Models;
+namespace ATV7_GERENCIADOR.Models;
 
 public class Projeto
 {

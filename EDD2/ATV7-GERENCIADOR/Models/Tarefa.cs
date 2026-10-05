@@ -1,4 +1,4 @@
-namespace GerenciadorDeTarefas.Models;
+namespace ATV7_GERENCIADOR.Models;
 
 public class Tarefa
 {
@@ -16,14 +16,35 @@ public class Tarefa
     }
     public void Concluir()
     {
-       
+       if (Status != "Concluída")
+        {
+            Status = "Concluída";
+            DataConclusao = DateTime.Now;
+        }
+        else
+        {
+            Console.WriteLine("A tarefa já está concluída.");
+        }
     }
     public void Cancelar()
     {
-        
+        if (Status != "Cancelada")
+        {
+            Status = "Cancelada";
+        }
+        else
+        {
+            Console.WriteLine("A tarefa já está cancelada.");
+        }
     }
     public void Reabrir()
     {
-       
+        if (Status != "Pendente"){
+            Status = "Pendente";
+            DataConclusao = DateTime.MinValue;
+        }
+        else{
+            Console.WriteLine("A tarefa já está aberta.");
+        }
     }
 }

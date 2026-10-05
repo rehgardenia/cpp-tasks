@@ -1,5 +1,6 @@
+namespace ATV7_GERENCIADOR.Controller;
 
-namespace GerenciadorDeTarefas.Controller;
+using ATV7_GERENCIADOR.Models;
 
 public class ProjetosController
 {
@@ -10,9 +11,9 @@ public class ProjetosController
         _projetos = new Projetos();
     }
 
-    public bool AdicionarProjeto(Projeto projeto)
+    public bool AdicionarProjeto(Projeto p)
     {
-        return _projetos.Adicionar(projeto);
+        return _projetos.Adicionar(p);
     }
 
     public bool RemoverProjeto(Projeto projeto)
