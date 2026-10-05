@@ -2,39 +2,48 @@ namespace GerenciadorDeTarefas.Models;
 
 public class Projeto
 {
-    public int Id {get;set;}
-    public string Nome {get;set;}
-    public  List<Tarefa> Tarefas {get;set;}
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public List<Tarefa> Tarefas { get; set; }
 
     public Projeto()
     {
         Tarefas = new List<Tarefa>();
     }
-    public void acionarTarefa(Tarefa tarefa)
+
+    public void AdicionarTarefa(Tarefa tarefa)
     {
+        if (tarefa is null) return;
         Tarefas.Add(tarefa);
-    }   
-    public bool removerTarefa(Tarefa tarefa)
+    }
+
+    public bool RemoverTarefa(Tarefa tarefa)
     {
+        if (tarefa is null) return false;
         return Tarefas.Remove(tarefa);
     }
-    public Tarefa buscarTarefa(Tarefa tarefa)
+
+    public Tarefa? BuscarTarefaPorId(int id)
     {
-        return Tarefas.FirstOrDefault(t => t.Id == tarefa.Id);
+        return Tarefas.FirstOrDefault(t => t.Id == id);
     }
-    public List<Tarefa> tarefasPorStatus(string status)
+
+    public List<Tarefa> TarefasPorStatus(string status)
     {
         return Tarefas.Where(t => t.Status == status).ToList();
     }
-    public List<Tarefa> tarefasPorPrioridade(int prioridade)
+
+    public List<Tarefa> TarefasPorPrioridade(int prioridade)
     {
         return Tarefas.Where(t => t.Prioridade == prioridade).ToList();
     }
-    public int totalAbertas()
+
+    public int TotalAbertas()
     {
         return Tarefas.Count(t => t.Status == "Pendente");
     }
-    public int totalConcluidas()
+
+    public int TotalConcluidas()
     {
         return Tarefas.Count(t => t.Status == "Concluída");
     }

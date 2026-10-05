@@ -1,4 +1,5 @@
-namespace GerenciadorTarefas.Models;
+namespace GerenciadorDeTarefas.Models;
+
 public class Tarefa
 {
     public int Id { get; set; }

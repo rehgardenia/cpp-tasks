@@ -1,32 +1,46 @@
+
+
 namespace GerenciadorDeTarefas.Models;
 
 public class Projetos
 {
-    private List<Projeto> itens;
+    private readonly List<Projeto> _itens;
 
     public Projetos()
     {
-        itens = new List<Projeto>();
+        _itens = new List<Projeto>();
     }
-    public bool adicionar(Projetos p)
+
+    public bool Adicionar(Projeto projeto)
     {
-        if (itens.Any(projeto => projeto.Nome == p.Nome))
-        {
-            return false; // Projeto com o mesmo nome já existe
-        }
-        itens.Add(p);
-        return true; // Projeto adicionado com sucesso
+        if (projeto is null)
+            return false;
+
+        if (_itens.Any(item => item.Nome.Equals(projeto.Nome, StringComparison.OrdinalIgnoreCase)))
+            return false;
+
+        _itens.Add(projeto);
+        return true;
     }
-    public bool remover(Projetos p)
+
+    public bool Remover(Projeto projeto)
     {
-        return itens.Remove(p);
+        if (projeto is null)
+            return false;
+
+        return _itens.Remove(projeto);
     }
-    public Projeto buscar(string nome)
+
+    public Projeto? BuscarPorNome(string nome)
     {
-        return itens.FirstOrDefault(projeto => projeto.Nome == nome);
+        if (string.IsNullOrWhiteSpace(nome))
+            return null;
+
+        return _itens.FirstOrDefault(item => item.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
     }
-    public List<Projeto> listar()
+
+    public List<Projeto> Listar()
     {
-        return itens;
+        return new List<Projeto>(_itens);
     }
 }

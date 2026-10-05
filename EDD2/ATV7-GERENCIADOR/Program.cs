@@ -1,4 +1,5 @@
-﻿namespace GerenciadorTarefas;
+﻿namespace GerenciadorDeTarefas;
+
 public class Program
 {
     public static void Main(string[] args)
