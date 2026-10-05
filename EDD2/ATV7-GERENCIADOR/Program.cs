@@ -1,1 +1,8 @@
-﻿Console.WriteLine("Hello, World!");
+﻿namespace GerenciadorTarefas;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
