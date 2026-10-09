@@ -10,7 +10,7 @@ namespace Models
             proximoAtendimento = 1;
             filaSenhas = new Queue<Senha>();
         }
-        public void gerarSenha()
+        public void gerar()
         {
             Senha novaSenha = new Senha(proximoAtendimento);
             filaSenhas.Enqueue(novaSenha);

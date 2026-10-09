@@ -20,6 +20,8 @@ namespace Models
             if (filaSenhas.Count > 0)
             {
                 Senha senhaChamada = filaSenhas.Dequeue();
+                senhaChamada.dataAtend = DateTime.Now.Date;
+                senhaChamada.horaAtend = DateTime.Now;
                 atendimentos.Enqueue(senhaChamada);
                 return true;
             }

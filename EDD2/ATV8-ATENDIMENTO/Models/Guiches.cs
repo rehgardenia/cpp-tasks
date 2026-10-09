@@ -8,10 +8,9 @@ namespace Models
         {
             guiches = new List<Guiche>();
         }
-        public void adicionar(int id)
+        public void adicionar(Guiche guiche)
         {
-            Guiche novoGuiche = new Guiche(id);
-            guiches.Add(novoGuiche);
+            guiches.Add(guiche);
         }
     }
 }
