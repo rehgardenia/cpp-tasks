@@ -5,6 +5,8 @@ namespace Models
         public int Id { get; set; }
         public DateTime dataGerac { get; set; }
         public DateTime horaGerac { get; set; }
+        public DateTime dataAtend { get; set; }
+        public DateTime horaAtend { get; set; }
 
         public Senha(int id)
         {
@@ -18,7 +20,7 @@ namespace Models
         }
         public string dadosCompletos()
         {
-            return $"{Id} - {dataGerac} - {horaGerac}";
+            return $"{Id} - {dataGerac} - {horaGerac} - {dataAtend} - {horaAtend}";
         }
 
     }
