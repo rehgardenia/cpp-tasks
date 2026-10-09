@@ -1,4 +1,4 @@
-# edd-tasks
+# ESTRUTURA DE DADOS
 Projetos Acadêmicos da disciplina de Estrutura de Dados
 
 Tech Stack:  C++ e C#
